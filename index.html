@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloudflare Pages + GitHub Deployment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --viridis-1: #440154;
+      --viridis-2: #3b528b;
+      --viridis-3: #21908d;
+      --viridis-4: #5dc963;
+      --viridis-5: #fde725;
+    }
+    body {
+      background-color: var(--viridis-1);
+      color: white;
+    }
+    .navbar {
+      background-color: var(--viridis-2);
+    }
+    .section-header {
+      color: var(--viridis-5);
+    }
+    .card {
+      background-color: var(--viridis-3);
+      color: white;
+      border: none;
+    }
+    .btn-viridis {
+      background-color: var(--viridis-4);
+      color: black;
+    }
+    a {
+      color: var(--viridis-5);
+    }
+    a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cloudflare Pages Setup</a>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h1 class="section-header mb-4">Deploy with Cloudflare Pages + GitHub</h1>
+    <p class="lead">Follow these steps to create a Cloudflare Pages application with automatic GitHub deployments.</p>
+
+    <div class="card my-4 p-4">
+      <h2 class="h4 mb-3">1. Prepare Your GitHub Repository</h2>
+      <ul>
+        <li>Create or navigate to a GitHub repository that contains your static site code (HTML, JS, CSS, etc.).</li>
+        <li>Ensure your project is pushed to the <code>main</code> branch (or another branch of your choice).</li>
+      </ul>
+    </div>
+
+    <div class="card my-4 p-4">
+      <h2 class="h4 mb-3">2. Log in to Cloudflare</h2>
+      <ul>
+        <li>Go to <a href="https://pages.cloudflare.com" target="_blank">pages.cloudflare.com</a>.</li>
+        <li>Log in using your Cloudflare account, or create one if you don’t have it.</li>
+      </ul>
+    </div>
+
+    <div class="card my-4 p-4">
+      <h2 class="h4 mb-3">3. Create a New Pages Project</h2>
+      <ul>
+        <li>Click <strong>"Create a project"</strong>.</li>
+        <li>Connect your GitHub account and authorize Cloudflare Pages to access your repositories.</li>
+        <li>Select the repository you want to deploy.</li>
+      </ul>
+    </div>
+
+    <div class="card my-4 p-4">
+      <h2 class="h4 mb-3">4. Configure Deployment Settings</h2>
+      <ul>
+        <li>Select the branch to deploy (e.g., <code>main</code>).</li>
+        <li>Set the build command (if using a static site generator like Hugo, Next.js, etc.).</li>
+        <li>Specify the output directory (e.g., <code>dist</code>, <code>build</code>, or <code>public</code>).</li>
+      </ul>
+    </div>
+
+    <div class="card my-4 p-4">
+      <h2 class="h4 mb-3">5. Deploy and Test</h2>
+      <ul>
+        <li>Click <strong>"Save and Deploy"</strong>.</li>
+        <li>Wait for the deployment to complete. You’ll receive a live preview URL like <code>your-project.pages.dev</code>.</li>
+        <li>Every new push to the selected branch on GitHub will trigger an automatic deployment.</li>
+      </ul>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="https://developers.cloudflare.com/pages" target="_blank" class="btn btn-viridis btn-lg">
+        Cloudflare Pages Docs
+      </a>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" style="background-color: var(--viridis-2);">
+    <p class="mb-0">© 2025 – Cloudflare Pages Guide using Viridis + Bootstrap 5</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
